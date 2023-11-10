@@ -16,7 +16,7 @@ window.onload = () => {
 
 // let text = 'hello';
 // console.log(text);
-
+/*
 const section = document.querySelector('section'); // 태그명으로 단수 요소
 const articles = section.querySelectorAll('article'); // 태그명으로 복수 요소, 유사배열, non live dom
 //querySelector 매칭되는 첫번째 요소만 찾아줌
@@ -41,3 +41,44 @@ console.log(prevEl);
 console.log(nextEl);
 console.log(sibling);
 console.log(siblings);
+*/
+
+const btns = document.querySelectorAll('.list1 li');
+console.log(btns);
+
+/*
+DOM (Document Object Model) : web api
+: 브라우저가 HTML태그를 해석해서 렌드링 할 때 자바스크립트로 하여금 제어할 수 있도록 객체형태로 만들어주는 API(Application Programing Interface : 입출력 시스템)
+*/
+console.dir(btns[0]); //돔객체 구조
+/*
+btns[0].onclick = () => {
+	console.log('엄청 중요한 작업');
+	btns[0].style.color = 'tomato';
+};
+
+btns[0].onclick = () => {
+	console.log('실수로 연결한 쓸데없는 작업');
+};
+*/
+
+// addEventListener('명령어', 콜백함수)
+// 이벤트 중복 연결 가능
+/*
+btns[0].addEventListener('click', () => {
+	console.log('엄청 중요한 작업');
+	btns[0].style.color = 'pink';
+});
+btns[0].addEventListener('click', () => {
+	console.log('실수로 연결한 쓸데없는 작업');
+});
+*/
+// btns 요소를 forEach로 반복을 돌면서 각 버튼 클릭시 console.log(button1~button3)
+
+btns.forEach((btn, index) => {
+	btn /*btns[index]*/
+		.addEventListener('click', () => {
+			console.log(`button${index + 1}`);
+			btns[index].style.color = 'pink';
+		});
+});
