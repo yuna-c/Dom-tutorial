@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+  <!-- 물리적으로 index.js를 DOM 생성보다 먼저 호출하지만 index.js와 body를 비동기적으로 같이 해석하다 body렌더링 완료시 호출하는 구문 -->
+  <!-- <script type="module" src="index.js"></script> -->
+</head>
+
+<body>
+  <section>
+    <article>box1</article>
+    <article class="num">box2</article>
+    <article>box3</article>
+
+    <ul>
+      <li>button1</li>
+      <li class="btn">button2</li>
+      <li>button3</li>
+    </ul>
+  </section>
+</body>
+
+</html>
